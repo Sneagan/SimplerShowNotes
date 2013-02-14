@@ -53,7 +53,7 @@ textarea:focus, input:focus {
 #mediumRadio {
 	margin-bottom: 10px;
 }
-#newEpisodeSummary, #newNotesText, #newNotesURL {
+#newEpisodeSummary, #newNotesText, #newNotesURL, #newKeywords {
 	padding: 10px;
 }
 #theTitle {

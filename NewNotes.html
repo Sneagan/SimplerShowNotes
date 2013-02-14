@@ -35,10 +35,10 @@
 		            <div id="showNotes">
 <!-- What you put here is what the show note will say in podcatchers -->
 		                <h3>Show notes text separated by commas</h3>
-		                <textarea id="newNotesText" rows="1" cols="50"></textarea>
+		                <textarea id="newNotesText" rows="2" cols="50"></textarea>
 <!-- What you put here is the link that the podcatcher will go to when the note is clicked on. They are tied to newNotesText in the order they appear. -->
 		                <h3>Show notes links separated by commas (corresponding order)</h3>
-		                <textarea id="newNotesURL" rows="1" cols="50"></textarea>
+		                <textarea id="newNotesURL" rows="2" cols="50"></textarea>
 		            </div>
 		            <div id="showLength">
 		                <h3>Length of Podcast</h3>
@@ -66,15 +66,15 @@
 		        </form>
 			</div>
 			<div id="outputContainer" style="display: none;">
-<!-- The HTML output is very simple, but if you know your JS you can make it as complicated as you like.  :) -->
-		        <div id="htmlOutputContainer">
-		        	<h3>HTML Code:</h3>
-		            <code id="htmlOutput"></code>
-		        </div>
 <!-- This output should be similar for just about everyone. You don't have the freedom you do with the HTML output. Just make sure you change the values in simpleShowNotes.js to match your podcast. -->
 		        <div id="xmlOutputContainer">
 		        	<h3>XML Item:</h3>
 		            <code id="xmlOutput"></code>
+		        </div>
+<!-- The HTML output is very simple, but if you know your JS you can make it as complicated as you like.  :) -->
+		        <div id="htmlOutputContainer">
+		        	<h3>HTML Code:</h3>
+		            <code id="htmlOutput"></code>
 		        </div>
 			</div>
 		</div>

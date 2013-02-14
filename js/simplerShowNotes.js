@@ -132,7 +132,7 @@ function episodeProcessor(form) {
     
     showHide = document.getElementById("outputContainer");
     showHide.style.display = "block";
-    document.getElementById("htmlOutput").innerHTML = newEpisodeHTML;
     document.getElementById("xmlOutput").innerHTML = newEpisodeXML;
+    document.getElementById("htmlOutput").innerHTML = newEpisodeHTML;
     document.getElementById("submitButton").scrollIntoView();
 };
