@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+<!--
+	JACKSON EGAN - http://sneagan.com - @Sneagan
+-->
+
+        <script type="text/javascript" src="js/simplerShowNotes.js"></script>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+    	<div id="content">
+<!-- This example is set up a simple podcast that discusses either a Book or a Comic. When you edit here, remember to go into simpleShowNotes.js and edit the output info there as well. -->
+    	<h1>New Episode</h1>
+    		<div id="formContainer">
+		        <form id="form" name="form" action="" method="post">
+		        	<h3>MetaData</h3>
+		            <div id="epNumber">
+		                Episode Number: <input class="numberInput" type="text" name="newEpisodeNumber">
+		            </div>
+		            <div id="mediumRadio">
+		                <input type="radio" id="bookSelected" name="medium" value="Book">Book &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		                <input type="radio" id="comicSelected" name="medium" value="Comic">Comic
+		            </div>
+		            <div id="bookMeta">
+		                Book Title: <input id="theTitle" type="text" name="bookTitle"><br>
+		                Author Name: <input id ="theAuthor" type="text" name="authorName">
+		            </div>
+		            <div id="summaryField">
+<!-- The process file does not currently have the ability to handle links in the summary. Working on it. -->
+		                <h3>New Summary</h3>
+		                <textarea id="newEpisodeSummary" rows="6" cols="50"></textarea>
+		            </div>
+		            <div id="showNotes">
+<!-- What you put here is what the show note will say in podcatchers -->
+		                <h3>Show notes text separated by commas</h3>
+		                <textarea id="newNotesText" rows="1" cols="50"></textarea>
+<!-- What you put here is the link that the podcatcher will go to when the note is clicked on. They are tied to newNotesText in the order they appear. -->
+		                <h3>Show notes links separated by commas (corresponding order)</h3>
+		                <textarea id="newNotesURL" rows="1" cols="50"></textarea>
+		            </div>
+		            <div id="showLength">
+		                <h3>Length of Podcast</h3>
+		                <span>Hours: </span><input class="numberInput" id="lengthHours" type="text" name="lengthHours"><br>
+		                <span>Minutes: </span><input class="numberInput" id="lengthMinutes" type="text" name="lengthMinutes"><br>
+		                <span>Seconds: </span><input class="numberInput" id="lengthSeconds" type="text" name="lengthSecond">
+		            </div>
+		            <div id="showFileSize">
+<!-- Working on not requiring kb, but using mb instead. For now, move the decimal 3 places to the right, kiddos.  -->
+		                <span>File Size in kb: </span><input id="newFileSize" type="text" name="newFileSize">
+		            </div>
+		            <div id="showKeywords">
+		                <h3>Episode keywords separated by commas</h3>
+		                <textarea id="newKeywords" type="text" name="newKeyWords" rows="2" cols="50"></textarea>
+		            </div>
+		            <div id="hostsSelector">
+		            <h3>Hosts:</h3>
+		                <input type="checkbox" id="host1" name="host1" value="Mr. Bean"> Host 1<br>
+		                <input type="checkbox" id="host2" name="host2" value="Mr. Peanut"> Host 2<br>
+		                <input type="checkbox" id="host3" name="host3" value="Mrs. PacMan"> Host 3<br>
+		                <input type="checkbox" id="host4" name="host4" value="Ms. Scarlet"> Host 4
+		            </div>
+		
+		            <input id="submitButton" type="button" name="" value="Process" onClick="episodeProcessor(this.form)">
+		        </form>
+			</div>
+			<div id="outputContainer" style="display: none;">
+<!-- The HTML output is very simple, but if you know your JS you can make it as complicated as you like.  :) -->
+		        <div id="htmlOutputContainer">
+		        	<h3>HTML Code:</h3>
+		            <code id="htmlOutput"></code>
+		        </div>
+<!-- This output should be similar for just about everyone. You don't have the freedom you do with the HTML output. Just make sure you change the values in simpleShowNotes.js to match your podcast. -->
+		        <div id="xmlOutputContainer">
+		        	<h3>XML Item:</h3>
+		            <code id="xmlOutput"></code>
+		        </div>
+			</div>
+		</div>
+    </body>
+</html>

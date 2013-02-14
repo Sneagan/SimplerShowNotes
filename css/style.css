@@ -1,0 +1,95 @@
+/*
+For SimplerShowNotes.js by JACKSON EGAN
+http://sneagan.com
+@sneagan
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Buenard:400,700);
+
+body {
+	width: 100%;
+	background-color: #141414;
+}
+p, div, form, form div, form p, h1, h2, h3, h4 {
+	font-family: 'Quattrocento Sans', sans-serif;
+	color: #141414;
+}
+h1 {
+	margin-left: 23%;
+	font-family: 'Buenard', serif;
+	margin-bottom: 40px;
+}
+h3 {
+	margin-top: 15px;
+}
+div#content {
+	width: 500px;
+	margin-top: -10px;
+	position: relative;
+	left: 26%;
+	text-align: left;
+	background-color: #e3e3e3;
+	padding: 15px;
+	padding-left: 7%;
+}
+.numberInput {
+	width: 20px;
+}
+input, select, textarea{
+    color: #e3e3e3;
+    background-color: #141414;
+	font: 12pt 'Quattrocento Sans', sans-serif;
+}
+textarea:focus, input:focus {
+    color: #e3e3e3;
+    background-color: #141414;
+    font-family: 'Quattrocento Sans', sans-serif;
+    font: 12pt 'Quattrocento Sans', sans-serif;
+}
+#epNumber {
+	margin-bottom: 10px;
+}
+#mediumRadio {
+	margin-bottom: 10px;
+}
+#newEpisodeSummary, #newNotesText, #newNotesURL {
+	padding: 10px;
+}
+#theTitle {
+	margin-left: 26px;
+	margin-bottom: 9px;
+}
+#lengthHours {
+	margin-left: 20px;
+}
+#lengthMinutes {
+	margin-left: 7px;
+}
+#lengthSeconds {
+	margin-left: 3px;
+}
+#newFileSize {
+	width: 50px;
+	margin-top: 15px;
+}
+#submitButton {
+	position: relative;
+	margin-top: 20px;
+	margin-left: 15%;
+	width: 50%;
+	height: 40px;
+	font-size: 15pt;
+	background-color: #9e2f2f;
+}
+#htmlOutputContainer, #xmlOutputContainer {
+	width: 400px;
+	margin-left: -50px;
+}
+#htmlOutputContainer {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+
+
