@@ -3,6 +3,45 @@
 // @Sneagan
 
 // You need to customize this script before using it. I've marked the bare minimum you need to look at.
+// EDIT
+// Runs if Drafts App sends URL with Summary and Show Notes text without links. You will need to change the URL at least
+
+function ifSummaryFirst(pageURL) {
+    var theSummary, theText, summaryDraftsArray, decodedText, remHTTP;
+    
+    decodedText = decodeURIComponent(pageURL);
+    remHTTP = decodedText.replace("http://your-podcast-url/newepisode/?summarytext=", "");
+    notesText = remHTTP.replace("&notestext=", ";");
+    summaryDraftsArray = notesText.split(";");
+    
+    if (summaryDraftsArray[0] === "undefined" || summaryDraftsArray[1] === "undefined") {
+        summaryDraftsArray[0] = " ";
+        summaryDraftsArray[1] = " ";
+    };
+    document.getElementById("newEpisodeSummary").innerHTML = summaryDraftsArray[0];
+    document.getElementById("newNotesText").innerHTML = summaryDraftsArray[1];
+};
+// END
+
+// EDIT
+// Run if Drafts App sends Show Notes text and URL. The URL here should be the same as above.
+function ifNotesFirst(pageURL) {
+    var theNotesText, decodedText, remHTTP, notesURL, notesDraftsArray;
+    
+    decodedText = decodeURIComponent(pageURL);
+    remHTTP = decodedText.replace("http://your-podcast-url/newepisode/?notestext=", "");
+    notesURL = remHTTP.replace("&notesurl=", ";");
+    notesDraftsArray = notesURL.split(";");
+    
+    if (notesDraftsArray[0] === "undefined" || notesDraftsArray[1] === "undefined") {
+        notesDraftsArray[0] = " ";
+        notesDraftsArray[1] = " ";
+    };
+    document.getElementById("newNotesText").innerHTML = notesDraftsArray[0];
+    document.getElementById("newNotesURL").innerHTML = notesDraftsArray[1];
+};
+// END
+
 
 function episodeProcessor(form) {
     // All variables

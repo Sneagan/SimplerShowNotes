@@ -5,7 +5,14 @@
 <!--
 	JACKSON EGAN - http://sneagan.com - @Sneagan
 -->
-
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	    <script type="text/javascript">
+		    $(document).ready(function(){ 
+				var pageURL = document.URL;
+				if (pageURL.indexOf("http://your-podcast-url/newepisode/?summarytext=") > -1) {ifSummaryFirst(pageURL)};
+				if (pageURL.indexOf("http://your-podcast-url/newepisode/?notestext=") > -1) {ifNotesFirst(pageURL)};
+			});
+		</script>
         <script type="text/javascript" src="js/simplerShowNotes.js"></script>
         <link rel="stylesheet" href="css/style.css" />
     </head>
