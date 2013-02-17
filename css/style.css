@@ -36,6 +36,12 @@ div#content {
 .numberInput {
 	width: 20px;
 }
+textarea {
+	width: 85%;
+}
+textArea#newEpisodeSummary {
+	height: 90px;
+}
 input, select, textarea{
     color: #e3e3e3;
     background-color: #141414;
@@ -92,4 +98,38 @@ textarea:focus, input:focus {
 }
 
 
-
+@media only screen and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+	p, div, form, form div, form p, h1, h2, h3, h4 {
+		color: #141414;
+		font-family: 'Quattrocento Sans', sans-serif;
+	}
+	input, select, textarea{
+	    color: #000;
+	    background-color: #fff;
+		font: 12pt 'Quattrocento Sans', sans-serif;
+	}
+	textarea:focus, input:focus {
+	    color: #000;
+	    background-color: #fff;
+	    font-family: 'Quattrocento Sans', sans-serif;
+	    font: 12pt 'Quattrocento Sans', sans-serif;
+	}
+	input[type="button"] {
+		background-color: red;
+	}
+	div#content {
+		width: 100%;
+		margin-top: -10px;
+		text-align: left;
+		background-color: #e3e3e3;
+		padding: 0px;
+		margin-left: -27%;
+	}
+	div#formContainer {
+		padding-left: 10%;
+		padding-bottom: 100px;
+	}
+	h1 {
+		padding-top: 20px;
+	}
+}
