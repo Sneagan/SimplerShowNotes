@@ -11,14 +11,27 @@ body {
 	width: 100%;
 	background-color: #141414;
 }
-p, div, form, form div, form p, h1, h2, h3, h4 {
+p, div, form, form div, form p, h3, h4 {
 	font-family: 'Quattrocento Sans', sans-serif;
 	color: #141414;
 }
-h1 {
-	margin-left: 23%;
-	font-family: 'Buenard', serif;
+a,
+a:hover,
+a:visited {
+	text-decoration: underline;
+	color: #000;
+}
+#header {
+	padding-right: 15%;
 	margin-bottom: 40px;
+}
+h1, h2, #header h3 {
+	text-align: center;
+	/*margin-left: 23%;*/
+	font-family: 'Buenard', serif;
+}
+h1 {
+	margin-bottom: -15px;
 }
 h3 {
 	margin-top: 15px;
@@ -81,12 +94,14 @@ textarea:focus, input:focus {
 }
 #submitButton {
 	position: relative;
+	color: #fff;
 	margin-top: 20px;
 	margin-left: 15%;
 	width: 50%;
 	height: 40px;
 	font-size: 15pt;
 	background-color: #9e2f2f;
+	-webkit-appearance: none;
 }
 #htmlOutputContainer, #xmlOutputContainer {
 	width: 400px;
@@ -102,6 +117,22 @@ textarea:focus, input:focus {
 	p, div, form, form div, form p, h1, h2, h3, h4 {
 		color: #141414;
 		font-family: 'Quattrocento Sans', sans-serif;
+	}
+	#header {
+		padding-right: 0px;
+		margin-bottom: 40px;
+	}
+	h1, h2, #header h3 {
+		text-align: center;
+		/*margin-left: 23%;*/
+		font-family: 'Buenard', serif;
+	}
+	h1 {
+		margin-bottom: -15px;
+		padding-top: 20px;
+	}
+	h3 {
+		margin-top: 15px;
 	}
 	input, select, textarea{
 	    color: #000;
@@ -129,7 +160,15 @@ textarea:focus, input:focus {
 		padding-left: 10%;
 		padding-bottom: 100px;
 	}
-	h1 {
-		padding-top: 20px;
+	#theTitle {
+		margin-left: 0px;
+		margin-bottom: 9px;
+	}
+	#submitButton {
+		width: 100%;
+		height: 60px;
+		margin-left: -5%;
+		margin-top: 40px;
+		font-size: 25pt;
 	}
 }

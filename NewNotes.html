@@ -10,8 +10,8 @@
 	    <script type="text/javascript">
 		    $(document).ready(function(){ 
 				var pageURL = document.URL;
-				if (pageURL.indexOf("http://your-podcast-url/newepisode/?summarytext=") > -1) {ifSummaryFirst(pageURL)};
-				if (pageURL.indexOf("http://your-podcast-url/newepisode/?notestext=") > -1) {ifNotesFirst(pageURL)};
+				if (pageURL.indexOf("http://bookbytes.tv/simpler-show-notes-example/?summarytext=") > -1) {ifSummaryFirst(pageURL)};
+				if (pageURL.indexOf("http://bookbytes.tv/simpler-show-notes-example/?notestext=") > -1) {ifNotesFirst(pageURL)};
 			});
 		</script>
         <script type="text/javascript" src="js/simplerShowNotes.js"></script>
@@ -20,14 +20,18 @@
 				}, 500);
 		</script>
         <link rel="stylesheet" href="css/style.css" />
+        <title>Simpler Show Notes</title>
     </head>
     <body>
     	<div id="content">
 <!-- This example is set up a simple podcast that discusses either a Book or a Comic. When you edit here, remember to go into simpleShowNotes.js and edit the output info there as well. -->
-    	<h1>New Episode</h1>
+    	<div id="header">
+	    	<h1>Simpler Show Notes</h1>
+	    	<h2>A Podcast Metadata Processor</h2>
+	    	<h3><a href="https://github.com/Sneagan/SimplerShowNotes">Follow this project on GitHub</a></h3>
+    	</div>
     		<div id="formContainer">
 		        <form id="form" name="form" action="" method="post">
-		        	<h3>MetaData</h3>
 		            <div id="epNumber">
 		                Episode Number: <input class="numberInput" type="text" name="newEpisodeNumber">
 		            </div>
@@ -42,15 +46,15 @@
 		            <div id="summaryField">
 <!-- The process file does not currently have the ability to handle links in the summary. Working on it. -->
 		                <h3>New Summary</h3>
-		                <textarea id="newEpisodeSummary" rows="6" cols="50"></textarea>
+		                <textarea id="newEpisodeSummary"></textarea>
 		            </div>
 		            <div id="showNotes">
 <!-- What you put here is what the show note will say in podcatchers -->
 		                <h3>Show notes text separated by commas</h3>
-		                <textarea id="newNotesText" rows="2" cols="50"></textarea>
+		                <textarea id="newNotesText"></textarea>
 <!-- What you put here is the link that the podcatcher will go to when the note is clicked on. They are tied to newNotesText in the order they appear. -->
-		                <h3>Show notes links separated by commas (corresponding order)</h3>
-		                <textarea id="newNotesURL" rows="2" cols="50"></textarea>
+		                <h3>Show notes links separated by commas<br>(corresponding order)</h3>
+		                <textarea id="newNotesURL"></textarea>
 		            </div>
 		            <div id="showLength">
 		                <h3>Length of Podcast</h3>
@@ -60,11 +64,11 @@
 		            </div>
 		            <div id="showFileSize">
 <!-- Working on not requiring kb, but using mb instead. For now, move the decimal 3 places to the right, kiddos.  -->
-		                <span>File Size in kb: </span><input id="newFileSize" type="text" name="newFileSize">
+		                <span>File Size (kb): </span><input id="newFileSize" type="text" name="newFileSize">
 		            </div>
 		            <div id="showKeywords">
 		                <h3>Episode keywords separated by commas</h3>
-		                <textarea id="newKeywords" type="text" name="newKeyWords" rows="2" cols="50"></textarea>
+		                <textarea id="newKeywords" type="text" name="newKeyWords"></textarea>
 		            </div>
 		            <div id="hostsSelector">
 		            <h3>Hosts:</h3>
