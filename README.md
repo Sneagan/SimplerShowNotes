@@ -1,7 +1,7 @@
 SimplerShowNotes
 ================
 
-A quick and dirty JS script to create a new RSS &lt;item&gt; for Podcasts (some assembly required). It can create show notes so you don't have to. You can find an example live [here](http://bookbytes.tv/simpler-show-notes-example).
+A quick and dirty JS script to create a new RSS &lt;item&gt; for Podcasts (some assembly required). It can create show notes so you don't have to. You can find an example live [here](http://bookbytes.tv/simpler-show-notes-example). The mobile version has currently only been tested on iOS devices.
 
 I wrote up this little script to get podcast information from a form and output code to speed up the production of RSS podcast episodes. It supports URL schemes to recieve data from [Drafts](http://agiletortoise.com/drafts) in addition to direct input. It **will not** write the entire RSS feed for you. If you need a wireframe to start with, look [here](http://www.podcast411.com/howto_1.html). 
 
