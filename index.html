@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+<!--
+	JACKSON EGAN - http://sneagan.com - @Sneagan
+-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="js/simplerShowNotes.js"></script>
+	    <script type="text/javascript">
+		    $(document).ready(function(){ 
+				var pageURL = document.URL;
+				if (pageURL.indexOf("http://simplershownotes.com/?summarytext=") > -1) {ifSummaryFirst(pageURL)};
+				if (pageURL.indexOf("http://simplershownotes.com/?notestext=") > -1) {ifNotesFirst(pageURL)};
+			});
+		</script>
+        <script>setTimeout(function () {
+  				window.scrollTo(0, 5);
+				}, 500);
+		</script>
+        <title>Simpler Show Notes</title>
+    </head>
+    <body>
+    	<div class="content">
+<!-- This example is set up a simple podcast that discusses either a Book or a Comic. When you edit here, remember to go into simpleShowNotes.js and edit the output info there as well. -->
+			<section class="headerContainer">
+		    	<header>
+			    	<h1>Simpler Show Notes</h1>
+				    	<button class="external-nav btn btn-custom"><a href="https://github.com/Sneagan/SimplerShowNotes">GitHub</a></button>
+		    	</header>
+		    </section>
+    		<section class="mainContent">
+		        <form class="form" name="form" action="" method="post">
+		        	<div class="itunesTitleContainer">
+		        		Episode Title: <input id="itunesTitle" type="text" name="itunesTitle">		        	
+		        	</div>
+		        	<div class="itunesSubtitleContainer">
+		        		Episode Subtitle: <input id="itunesSubtitle" type="text" name="itunesSubtitle">		        	
+		        	</div>
+		        	<div class="epNumber">
+		                Episode Number: <input class="numberInput" type="text" name="newEpisodeNumber">
+		            </div>
+		            <div class="explicitRadioContainer">
+		                <input type="radio" id="explicitSelected" name="medium" value="Yes">Explicit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		                <input type="radio" id="explicitDeselected" name="medium" value="No">Not Explicit
+		            </div>
+		            <div class="itunesAuthorContainer">
+		        		Episode Author (for iTunes): <input id="itunesAuthor" type="text" name="itunesAuthor">		        	
+		        	</div>
+		        	<div class="podcastSiteContainer">
+		        		Podcast Main Site URL: <input id="podcastSite" type="text" name="podcastSite">		        	
+		        	</div>
+		            <div class="mediaSourceContainer">
+		        		Episode Media File URL: <input id="mediaSourceURL" type="text" name="mediaSourceURL">		        	
+		        	</div>
+		            <div class="summaryField">
+<!-- The process file does not currently have the ability to handle links in the summary. Working on it. -->
+		                <h3>New Summary</h3>
+		                <textarea id="newEpisodeSummary"></textarea>
+		            </div>
+		            <div class="showNotes">
+<!-- What you put here is what the show note will say in podcatchers -->
+		                <h3>Show notes text separated by commas</h3>
+		                <textarea id="newNotesText"></textarea>
+<!-- What you put here is the link that the podcatcher will go to when the note is clicked on. They are tied to newNotesText in the order they appear. -->
+		                <h3>Show notes links separated by commas<br>(corresponding order)</h3>
+		                <textarea id="newNotesURL"></textarea>
+		            </div>
+		            <div class="hostsFields">
+			            <h3>Host Names separated by commas</h3>
+			            <textarea id="hostsText"></textarea>
+			            <h3>Host Links separated by commas<br>(corresponding order)</h3>
+			            <textarea id="hostsURL"></textarea>
+		            </div>
+		            <div class="showLength">
+		                <h3>Length of Podcast</h3>
+		                <span>Hours: </span><input class="numberInput" id="lengthHours" type="text" name="lengthHours"><br>
+		                <span>Minutes: </span><input class="numberInput" id="lengthMinutes" type="text" name="lengthMinutes"><br>
+		                <span>Seconds: </span><input class="numberInput" id="lengthSeconds" type="text" name="lengthSecond">
+		            </div>
+		            <div class="showFileSize">
+<!-- Working on not requiring kb, but using mb instead. For now, move the decimal 3 places to the right, kclassdos.  -->
+		                <span>File Size (kb): </span><input id="newFileSize" type="text" name="newFileSize">
+		            </div>
+		            <div class="showKeywords">
+		                <h3>Episode keywords separated by commas</h3>
+		                <textarea id="newKeywords" type="text" name="newKeyWords"></textarea>
+		            </div>		
+		            <input class="btn btn-custom" id="submitButton" type="button" name="" value="Process" onClick="episodeProcessor(this.form)">
+		        </form>
+				<div id="outputContainer" style="display: none;">
+	<!-- This output should be similar for just about everyone. -->
+			        <div class="xmlOutputContainer">
+			        	<h3>Paste this code above the first &lt;item&gt; in your RSS Feed:</h3>
+			            <div id="xmlOutput"></div>
+			        </div>
+				</div>
+			</section>
+		</div>
+    </body>
+</html>
