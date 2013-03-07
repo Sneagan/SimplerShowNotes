@@ -22,6 +22,95 @@ p, div, form, form div, form p, h3, h4 {
 	color: #141414;
 	font: 12pt 'Quattrocento Sans', sans-serif;
 }
+h1 a, h1 a:hover, h1 a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+.banner {
+	width: 74%;
+	height: 275px;
+	padding-left: 3%;
+	padding-right: 3%;
+	margin-top: 100px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	-webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+	background-image: url(../img/gun_metal.png);
+}
+.bannerText {
+	color: #ffffff;
+	font-size: 35pt;
+	text-align: center;
+	padding-top: 60px;
+	text-shadow: 0 0 5px #3e3e3e;
+}
+.bannernav {
+	margin-top: 40px;
+	margin-left: 17%;
+	height: 55px;
+	width: 25%;
+	font-size: 13pt !important;
+}
+.infoSections {
+	display: table;
+}
+.infoSections div {
+	display: table-cell;
+	width: 23%;
+	height: auto;
+	margin-left: 1%;
+	background-color: #fff;
+	float: left;
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-bottom: 1%;
+	-webkit-border-bottom-right-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-moz-border-radius-bottomright: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+.infoSections div h3 {
+	font-size: 17pt;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.infoText {
+	text-align: left;
+}
+#firstDiv {
+	margin-left: 11.75%;
+}
+.moreInfo {
+	float: left;
+	width: 76%;
+	margin-top: 10px;
+	margin-left: 10%;
+	margin-bottom: 100px;
+	padding: 2%;
+	background-color: #fff;
+	position: relative;
+	text-align: left;
+	-webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.moreInfo img {
+	float: left;
+	margin-top: -15%;
+	margin-bottom: -2.7%;
+	margin-left: -9%;
+	width: 25%;
+}
+.moreInfo span {
+	float: left;
+	margin-left: 10%;
+}
 a,
 a:hover,
 a:visited {
@@ -50,6 +139,11 @@ header h1 {
 	position: relative;
 	float: left;
 	font-size: 15pt;
+}
+.description h2 {
+	font-size: 15pt;
+	margin-left: 19%;
+	margin-bottom: 15px;
 }
 button.external-nav {
 	float: right;
@@ -220,7 +314,7 @@ textarea:focus, input:focus {
 .explicitRadioContainer {
 	margin-bottom: 10px;
 }
-#newEpisodeSummary, #newNotesText, #newNotesURL, #newKeywords {
+#newEpisodeSummary, #newNotesText, #newNotesURL, #newKeywords, #hostsText, #hostsURL {
 	padding: 10px;
 }
 #lengthHours {
@@ -259,6 +353,78 @@ textarea:focus, input:focus {
 	overflow: auto;
 }
 
+@media only screen and (min-width : 1360px) {
+	.banner {
+		width: 1000px;
+		height: 275px;
+		padding-left: 3%;
+		padding-right: 3%;
+		margin-top: 100px;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: left;
+		-webkit-border-radius: 6px;
+	    -moz-border-radius: 6px;
+	    border-radius: 6px;
+		background-image: url(../img/gun_metal.png);
+	}
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	.moreInfo img {
+		display: block !important;
+		margin-top: -185px;
+		margin-left: -70px;
+		width: 200px;
+	}
+	.moreInfo span {
+		float: left;
+		margin-left: 80px!important;
+	}
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+	.infoSection2 {
+		height: 177px !important;
+	}
+	.infoSection3 {
+		height: 177px !important;
+	}
+	.bannerText {
+		padding-top: 30px !important;
+	}
+	.moreInfo img {
+		margin-top: -174px;
+	}
+}
+@media only screen and (max-width : 840px) {
+	.moreInfo img {
+		display: none;
+	}
+	.moreInfo span {
+		float: left;
+		margin-left: 0px;
+	}
+}
+@media only screen and (max-width : 740px) {
+	.bannernav {
+		margin-top: 40px;
+		margin-left: 17%;
+		height: 55px;
+		width: 25%;
+		font-size: 10pt !important;
+	}
+	.infoSections div h3 {
+		font-size: 15pt;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+}
 @media only screen and (max-width : 675px) {
 	.mainContent {
 		width: 90%;
@@ -271,8 +437,6 @@ textarea:focus, input:focus {
 		padding: 15px;
 		padding-left: 7%;
 	}
-}
-@media only screen and (max-width : 675px) {
 	#itunesTitle {
 		margin-left: 0px;
 		margin-bottom: 15px;
@@ -293,10 +457,84 @@ textarea:focus, input:focus {
 		margin-bottom: 10px;
 	}
 }
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width : 625px) {
+	.bannernav {
+		margin-top: 40px;
+		margin-left: 14%;
+		height: 55px;
+		width: 30%;
+		font-size: 10pt !important;
+	}
+}
+@media only screen and (max-width : 585px) {
+	.bannerText {
+		color: #ffffff;
+		font-size: 35pt;
+		text-align: center;
+		padding-top: 10px;
+		text-shadow: 0 0 5px #3e3e3e;
+	}
+	.bannernav {
+		margin-top: 30px;
+		margin-left: 10%;
+		height: 55px;
+		width: 35%;
+		font-size: 10pt !important;
+	}
+	.infoSection1 {
+		position: absolute;
+		margin-top: 0px;
+		width: 69% !important;
+		margin-left: 13% !important;
+		padding-left: 3% !important;
+		padding-right: 3% !important;
+		padding-bottom: 3% !important;
+	}
+	.infoSection2 {
+		position: absolute;
+		margin-top: 130px;
+		width: 69% !important;
+		margin-left: 13% !important;
+		padding-left: 3% !important;
+		padding-right: 3% !important;
+		padding-bottom: 3% !important;
+	}
+	.infoSection3 {
+		position: absolute;
+		margin-top: 250px;
+		width: 69% !important;
+		margin-left: 13% !important;
+		padding-left: 3% !important;
+		padding-right: 3% !important;
+		padding-bottom: 3% !important;
+	}
+	.moreInfo {
+		position: absolute;
+		margin-top: 400px;
+		margin-left: 10% !important;
+		padding-left: 3% !important;
+		padding-right: 3% !important;
+		padding-bottom: 3% !important;
+	}
+}
+@media only screen and (max-width : 480px) {
+	.headerContainer {
+		width: 100%;
+		margin-top: 0px !important;
+		z-index: 2;
+		margin-bottom: 30px;
+		-moz-box-shadow: 0 0 10px #000000;
+		-webkit-box-shadow: 0 0 10px #000000;
+		box-shadow: 0 0 10px #000000;
+		position: fixed;
+	}
+	#mainHeader {
+		height: 40px;
+		margin-bottom: 0px;
+	}
 	.mainContent {
 		width: 90%;
-		margin-top: 100px;
+		margin-top: 0px;
 		position: relative;
 		margin-left: auto;
 		margin-right: auto;
@@ -304,10 +542,138 @@ textarea:focus, input:focus {
 		background-color: #e3e3e3;
 		padding: 15px;
 		padding-left: 7%;
+		padding-top: 100px;
 	}
 	button.external-nav {
-		margin-right: 60%;
-		margin-top: 5px;
+		margin-right: 30%;
+		margin-top: -5px;
+	}
+	.banner {
+		width: 100%;
+		height: 275px;
+		padding-left: 3%;
+		padding-right: 3%;
+		padding-top: 100px;
+		margin-top: 0px;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: left;
+		-webkit-border-radius: 6px;
+    	-moz-border-radius: 6px;
+    	border-radius: 6px;
+		background-image: url(../img/gun_metal.png);
+	}
+	.bannernav {
+		margin-top: 30px;
+		margin-left: 10%;
+		height: 55px;
+		width: 35%;
+		font-size: 10pt !important;
+	}
+	.infoSection1 {
+		width: 90% !important;
+		position: absolute;
+		margin-top: 0px;
+		margin-left: 2.3% !important;
+		padding-left: 3% !important;
+		padding-right: 3% !important;
+		padding-bottom: 3% !important;
+		-webkit-border-radius: 6px;
+    	-moz-border-radius: 6px;
+		border-radius: 6px;
+	}
+	.infoSection2 {
+		width: 90% !important;
+		position: absolute;
+		margin-top: 175px;
+		margin-left: 2.3% !important;
+		padding-left: 3% !important;
+		padding-right: 3% !important;
+		padding-bottom: 3% !important;
+		-webkit-border-radius: 6px;
+    	-moz-border-radius: 6px;
+    	border-radius: 6px;
+	}
+	.infoSection3 {
+		width: 90% !important;
+		position: absolute;
+		margin-top: 328px;
+		margin-left: 2.3% !important;
+		padding-left: 3% !important;
+		padding-right: 3% !important;
+		padding-bottom: 3% !important;
+		-webkit-border-radius: 6px;
+    	-moz-border-radius: 6px;
+    	border-radius: 6px;
+	}
+	.moreInfo {
+		width: 90% !important;
+		position: absolute;
+		margin-top: 490px;
+		margin-left: 2.3% !important;
+		padding-left: 3% !important;
+		padding-right: 3% !important;
+		padding-bottom: 3% !important;
+		height: auto;
+		font-size: 15pt;
+	}
+	.description h2 {
+		font-size: 15pt;
+		width: 100%;
+		text-align: center;
+		margin-left: -3%;
+		margin-bottom: 15px;
+	}
+	#itunesTitle {
+		margin-left: 0px;
+		margin-bottom: 15px;
+	}
+	#itunesSubtitle {
+		margin-left: 0px;
+		margin-bottom: 15px;
+	}
+	#itunesAuthor {
+		margin-bottom: 15px;
+	}
+	#podcastSite {
+		margin-left: 0px;
+		margin-bottom: 15px;
+	}
+	#mediaSourceURL {
+		margin-left: 0px;
+		margin-bottom: 10px;
+	}
+	#lengthHours {
+		margin-left: 20px;
+	}
+	#lengthMinutes {
+		margin-left: 7px;
+	}
+	#lengthSeconds {
+		margin-left: 3px;
+	}
+	#submitButton {
+		position: relative;
+		margin-top: 20px;
+		width: 80%;
+		height: 40px;
+		font-size: 15pt;
+		margin-left: 7%;
+		-webkit-appearance: none;
+	}
+}
+
+@media only screen and (max-width : 320px) {
+	.headerContainer {
+		position: fixed;
+		width: 100%;
+		margin-top: 0px;
+		z-index: 2;
+	}
+	#mainHeader {
+		height: 40px;
+		margin-bottom: 0px;
 	}
 	header {
 		width: 100%;
@@ -315,6 +681,104 @@ textarea:focus, input:focus {
 		padding-left: 20%;
 		padding-top: 15px;
 		height: 60px;
+		top: 0px;
+		margin-top: 0px !important;
+		-moz-box-shadow: 0 0 5px #000000;
+		-webkit-box-shadow: 0 0 5px #000000;
+		box-shadow: 0 0 5px #000000;
+	}
+	.banner {
+		width: 90%;
+		height: 275px;
+		padding-left: 3%;
+		padding-right: 3%;
+		margin-top: 0px;
+		padding-top: 70px;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: left;
+		-webkit-border-radius: 6px;
+    	-moz-border-radius: 6px;
+    	border-radius: 6px;
+		background-image: url(../img/gun_metal.png);
+	}
+	.mainContent {
+		width: 90%;
+		margin-top: 0px;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: left;
+		background-color: #e3e3e3;
+		padding: 15px;
+		padding-left: 7%;
+		padding-top: 100px;
+	}
+	button.external-nav {
+		margin-right: 60%;
+		margin-top: 5px;
+	}
+	.bannernav {
+		margin-top: 30px;
+		margin-left: 10%;
+		height: 55px;
+		width: 38%;
+		font-size: 10pt !important;
+	}
+	.infoSection1 {
+		width: 90% !important;
+		position: absolute;
+		margin-top: 0px;
+		margin-left: 2.3% !important;
+		padding-left: 3% !important;
+		padding-right: 3% !important;
+		padding-bottom: 3% !important;
+		-webkit-border-radius: 6px;
+    	-moz-border-radius: 6px;
+		border-radius: 6px;
+	}
+	.infoSection2 {
+		width: 90% !important;
+		position: absolute;
+		margin-top: 168px;
+		margin-left: 2.3% !important;
+		padding-left: 3% !important;
+		padding-right: 3% !important;
+		padding-bottom: 3% !important;
+		-webkit-border-radius: 6px;
+    	-moz-border-radius: 6px;
+    	border-radius: 6px;
+	}
+	.infoSection3 {
+		width: 90% !important;
+		position: absolute;
+		margin-top: 318px;
+		margin-left: 2.3% !important;
+		padding-left: 3% !important;
+		padding-right: 3% !important;
+		padding-bottom: 3% !important;
+		-webkit-border-radius: 6px;
+    	-moz-border-radius: 6px;
+    	border-radius: 6px;
+	}
+	.moreInfo {
+		width: 90% !important;
+		position: absolute;
+		margin-top: 470px;
+		margin-left: 2.3% !important;
+		padding-left: 3% !important;
+		padding-right: 3% !important;
+		padding-bottom: 3% !important;
+		height: auto;
+		font-size: 13pt;
+	}
+	.description h2 {
+		font-size: 15pt;
+		width: 100%;
+		text-align: center;
+		margin-left: -3%;
+		margin-bottom: 15px;
 	}
 	#itunesTitle {
 		margin-left: 0px;

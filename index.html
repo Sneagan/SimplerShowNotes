@@ -6,11 +6,14 @@
 	JACKSON EGAN - http://sneagan.com - @Sneagan
 -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/reset.css" />
-		<link rel="stylesheet" href="css/style.css" />
+		<meta name="description" content="Simple Show Notes automates the creation of podcast RSS items to make publishing podcasts easier and much faster.">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>Simpler Show Notes: Podcast RSS Creator</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/style.css" />
 		
 		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-		<script type="text/javascript" src="js/simplerShowNotes.js"></script>
+		<script type="text/javascript" src="../js/simplerShowNotes.js"></script>
 	    <script type="text/javascript">
 		    $(document).ready(function(){ 
 				var pageURL = document.URL;
@@ -22,19 +25,29 @@
   				window.scrollTo(0, 5);
 				}, 500);
 		</script>
-        <title>Simpler Show Notes</title>
+		<link rel="apple-touch-icon-precomposed" href="touch-icon-iphone.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="touch-icon-ipad.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="touch-icon-iphone-retina.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="touch-icon-ipad-retina.png" />
+		<!-- iPhone (Retina) -->
+		<link href="apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+		<!-- iPhone 5 -->
+		<link href="apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
     </head>
     <body>
     	<div class="content">
 <!-- This example is set up a simple podcast that discusses either a Book or a Comic. When you edit here, remember to go into simpleShowNotes.js and edit the output info there as well. -->
 			<section class="headerContainer">
 		    	<header>
-			    	<h1>Simpler Show Notes</h1>
+			    	<h1><a href="http://simplershownotes.com">Simpler Show Notes</a></h1>
 				    	<button class="external-nav btn btn-custom"><a href="https://github.com/Sneagan/SimplerShowNotes">GitHub</a></button>
 		    	</header>
 		    </section>
     		<section class="mainContent">
 		        <form class="form" name="form" action="" method="post">
+		        	<div class="description">
+		        		<h2>An RSS &lt;item&gt; creator for podcasts</h2>
+		        	</div>
 		        	<div class="itunesTitleContainer">
 		        		Episode Title: <input id="itunesTitle" type="text" name="itunesTitle">		        	
 		        	</div>
@@ -101,5 +114,16 @@
 				</div>
 			</section>
 		</div>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-38674377-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
     </body>
 </html>
